@@ -23,6 +23,11 @@ code {
   width: 5%;
 }
 
+.logo {
+  height: 50px;
+  width: 50px;
+}
+
 .home {
   display: inline-block;
   margin: 10% auto;

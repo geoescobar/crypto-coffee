@@ -1,5 +1,4 @@
 import React from "react";
-import { FaCoffee } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { UserAuth } from "../context/authContext";
 
@@ -16,19 +15,17 @@ function Navbar() {
 
   return (
     <div>
-      <header>
-        <div className="navbar">
-          <Link to="/">
-            <FaCoffee className="logo" />
-          </Link>
-
-          {user?.displayName ? (
-            <button onClick={handleSignout}>Logout</button>
-          ) : (
-            <Link to="/login">Sign in</Link>
-          )}
+      <div className="navbar bg-base-100">
+        <div className="navbar-start">
+          <Link to="/">{user?.displayName}</Link>
         </div>
-      </header>
+
+        <div className="navbar-end">
+          <p onClick={handleSignout} className="btn btn-primary">
+            Logout
+          </p>
+        </div>
+      </div>
     </div>
   );
 }

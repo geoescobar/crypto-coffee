@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { UserAuth } from "../context/authContext";
 
 function Navbar() {
@@ -17,7 +16,9 @@ function Navbar() {
     <div>
       <div className="navbar bg-base-100">
         <div className="navbar-start">
-          <Link to="/">{user?.displayName}</Link>
+          <p className="text-white  underline decoration-solid decoration-primary">
+            {user?.displayName}
+          </p>
         </div>
 
         <div className="navbar-end">

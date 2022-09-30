@@ -13,7 +13,9 @@ function Home() {
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-md">
-            <h1 className="mb-5 text-5xl font-bold">Crypto Coffee</h1>
+            <h1 className="mb-5 text-5xl text-white font-bold">
+              Crypto Coffee
+            </h1>
             <h3 className="mb-5">Start your mornings right</h3>
             <p className="mb-5">
               A quick and easy way to check on your favorite coins!

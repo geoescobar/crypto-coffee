@@ -95,6 +95,10 @@
   width: 100%;
 }
 
+.symbol {
+  text-transform: uppercase !important;
+}
+
 .coin-price {
   width: 110px;
 }

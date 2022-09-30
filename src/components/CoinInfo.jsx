@@ -10,29 +10,46 @@ const Coin = ({
   priceChange,
 }) => {
   return (
-    <div className="coin-container">
-      <div className="coin-row">
-        <div className="coin">
-          <img src={image} alt="crypto" />
-          <h1>{name}</h1>
-          <p className="coin-symbol">{symbol}</p>
-        </div>
-        <div className="coin-data">
-          <p className="coin-price">${price}</p>
-          <p className="coin-volume">${volume.toLocaleString()}</p>
-
-          {priceChange < 0 ? (
-            <p className="coin-percent red">{priceChange.toFixed(2)}%</p>
-          ) : (
-            <p className="coin-percent green">{priceChange.toFixed(2)}%</p>
-          )}
-
-          <p className="coin-marketcap">
-            Mkt Cap: ${marketcap.toLocaleString()}
-          </p>
-        </div>
-      </div>
-    </div>
+    <>
+      <tbody>
+        <tr>
+          <td>
+            <div className="flex  space-x-3">
+              <div className="avatar">
+                <div className="mask mask-squircle w-12 h-12">
+                  <img src={image} alt="crypto" />
+                </div>
+              </div>
+              <div>
+                <div className="font-bold">{name}</div>
+                <div className="text-sm opacity-50">
+                  {" "}
+                  {priceChange < 0 ? (
+                    <p className="coin-percent red">
+                      {priceChange.toFixed(2)}%
+                    </p>
+                  ) : (
+                    <p className="coin-percent green">
+                      {priceChange.toFixed(2)}%
+                    </p>
+                  )}
+                </div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <p className="symbol">{symbol}</p>
+          </td>
+          <td>
+            {priceChange < 0 ? (
+              <p className="coin-percent red">${price.toFixed(2)}%</p>
+            ) : (
+              <p className="coin-percent green">${price.toFixed(2)}%</p>
+            )}
+          </td>
+        </tr>
+      </tbody>
+    </>
   );
 };
 

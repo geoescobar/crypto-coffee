@@ -14,7 +14,7 @@ const Coin = ({
       <tbody>
         <tr>
           <td>
-            <div className="flex  space-x-3">
+            <div className="flex overflow-y-auto space-x-3">
               <div className="avatar">
                 <div className="mask mask-squircle w-12 h-12">
                   <img src={image} alt="crypto" />
@@ -42,9 +42,9 @@ const Coin = ({
           </td>
           <td>
             {priceChange < 0 ? (
-              <p className="coin-percent red">${price.toFixed(2)}%</p>
+              <p className="coin-percent red">${price.toFixed(2)}</p>
             ) : (
-              <p className="coin-percent green">${price.toFixed(2)}%</p>
+              <p className="coin-percent green">${price.toFixed(2)}</p>
             )}
           </td>
         </tr>
